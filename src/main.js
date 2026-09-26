@@ -194,6 +194,6 @@ createReplay({stage,
 
 if(!new URLSearchParams(location.search).has('clean')){
   const links=document.createElement('nav');links.className='site-links';links.setAttribute('aria-label','About this recreation');
-  links.innerHTML=`<a href="${asset('transcript.html')}">Read the transcript</a><a href="${sourcePost}" target="_blank" rel="noopener noreferrer">Original post on X ↗</a>`;
+  links.innerHTML=`<a href="${asset('transcript.html')}">Read the transcript</a><a href="${sourcePost}" target="_blank" rel="noopener noreferrer">Original post on X ↗</a><a href="https://github.com/TylerRajotte/button-challenge" target="_blank" rel="noopener noreferrer">GitHub repo ↗</a>`;
   document.body.append(links);
 }

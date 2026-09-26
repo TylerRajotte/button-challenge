@@ -59,7 +59,7 @@ body.compare #app {overflow:visible;}
 .compare .touchpad-toggle {position:relative;right:auto;bottom:auto;display:block;margin:14px 24px 24px auto;}
 .compare .touchpad-toggle[hidden] {display:none;}
 
-.site-links{position:fixed;top:22px;right:22px;display:flex;gap:20px;z-index:9;font:12px/1.4 Arial,sans-serif;}
+.site-links{flex-wrap:wrap;row-gap:10px;position:fixed;top:22px;right:22px;display:flex;gap:20px;z-index:9;font:12px/1.4 Arial,sans-serif;}
 .site-links a{color:#536d92;text-decoration:none;}
 .site-links a:hover{text-decoration:underline;}
 body.compare .site-links{position:static;justify-content:center;padding:8px 16px 28px;flex-wrap:wrap;}

@@ -9,6 +9,7 @@ assert.equal(await page.locator('.touchpad').isVisible(),false);assert.equal(awa
 await page.getByRole('button',{name:'Use touchpad',exact:true}).tap();assert.ok(await page.locator('.touchpad').isVisible());
 await page.getByRole('button',{name:'Close touchpad'}).tap();assert.equal(await page.locator('.touchpad').isVisible(),false);
 assert.equal(await page.getByRole('link',{name:'Original post on X'}).getAttribute('href'),'https://x.com/raul_dronca/status/2093270659824529461');
+assert.equal(await page.getByRole('link',{name:'GitHub repo'}).getAttribute('href'),'https://github.com/TylerRajotte/button-challenge');
 fs.mkdirSync('evidence/publication',{recursive:true});await page.screenshot({path:'evidence/publication/mobile-default.png'});
 await page.getByRole('link',{name:'Read the transcript'}).tap();await page.waitForSelector('.message');assert.equal(await page.locator('.message').count(),37);assert.ok(await page.locator('.message-body strong').count()>0);assert.ok(await page.locator('.message-body ul li').count()>0);
 assert.ok(await page.locator('body').innerText().then(t=>t.includes('[private development address redacted]')));
