@@ -1,0 +1,18 @@
+import {launchBrowser} from './browser.mjs';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const base=process.env.SITE_URL||'http://127.0.0.1:4173/button-challenge/';
+const browser=await launchBrowser();const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
+await page.goto(base);await page.waitForFunction(()=>window.sourceReplay&&window.buttonReview?.state.webgl);
+assert.equal(await page.locator('.touchpad').isVisible(),false);assert.equal(await page.locator('.touchpad-toggle').getAttribute('aria-expanded'),'false');
+await page.getByRole('button',{name:'Use touchpad',exact:true}).tap();assert.ok(await page.locator('.touchpad').isVisible());
+await page.getByRole('button',{name:'Close touchpad'}).tap();assert.equal(await page.locator('.touchpad').isVisible(),false);
+assert.equal(await page.getByRole('link',{name:'Original post on X'}).getAttribute('href'),'https://x.com/raul_dronca/status/2093270659824529461');
+fs.mkdirSync('evidence/publication',{recursive:true});await page.screenshot({path:'evidence/publication/mobile-default.png'});
+await page.getByRole('link',{name:'Read the transcript'}).tap();await page.waitForSelector('.message');assert.equal(await page.locator('.message').count(),37);assert.ok(await page.locator('.message-body strong').count()>0);assert.ok(await page.locator('.message-body ul li').count()>0);
+assert.ok(await page.locator('body').innerText().then(t=>t.includes('[private development address redacted]')));
+assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'evidence/publication/transcript-mobile.png'});
+assert.equal(await page.locator('.thread-bar nav,.transcript-note').count(),0);assert.equal(await page.locator('.message time').count(),37);assert.equal(await page.locator('.message time').first().innerText(),'3:45 AM');const reply=page.locator('.message.user').filter({hasText:'It opens on my iPad'});assert.equal(await reply.locator('.message-body').innerText(),'It opens on my iPad');assert.equal(await page.locator('.message.assistant').filter({hasText:'Can your iPad open it?'}).count(),1);const response=await page.request.get(`${base}transcript.md`);assert.ok(response.ok());
+await page.goto(`${base}?compare`);await page.waitForFunction(()=>window.sourceReplay&&document.querySelector('video')?.readyState>=2);await page.getByRole('button',{name:'Play both'}).tap();await page.waitForFunction(()=>window.sourceReplay.state.time>.2);assert.ok(await page.locator('video').evaluate(v=>v.videoWidth)>0);
+assert.deepEqual(errors,[]);console.log({base,mobileTouchpadDefaultOff:'passed',toggle:'passed',sourceCredit:'passed',transcript:'37 timestamped messages',projectAssets:'passed',comparisonReplay:'passed',errors});await browser.close();

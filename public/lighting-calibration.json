@@ -1,0 +1,30 @@
+{
+  "method": "Black and 50% linear-grey swatches rendered with the actual PBR material and scene lights; output converted from sRGB to linear before fitting.",
+  "swatches": [
+    [
+      6,
+      6,
+      7
+    ],
+    [
+      180,
+      181,
+      184
+    ],
+    [
+      245,
+      246,
+      250
+    ]
+  ],
+  "linearFloor": [
+    0.001821161901293025,
+    0.001821161901293025,
+    0.0021246888848418626
+  ],
+  "linearGain": [
+    0.9091797225582233,
+    0.9205116755062281,
+    0.9543909884319699
+  ]
+}

@@ -1,0 +1,17 @@
+import {launchBrowser} from './browser.mjs';
+import assert from 'node:assert/strict';
+const browser=await launchBrowser();
+const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true,reducedMotion:'reduce'});
+await page.goto('http://127.0.0.1:5173/');await page.waitForFunction(()=>window.sourceReplay);
+assert.equal(await page.locator('.touchpad').isVisible(),false);await page.getByRole('button',{name:'Use touchpad'}).tap();
+const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,label:document.querySelector('#ripple-button').getBoundingClientRect().toJSON(),pad:document.querySelector('.touchpad').getBoundingClientRect().toJSON(),motion:window.buttonReview.state.reducedMotion}));
+assert.equal(layout.width,390);assert.ok(layout.scrollWidth<=390);assert.ok(layout.label.bottom<layout.pad.top);assert.equal(layout.motion,true);
+await page.getByRole('button',{name:'Replay source motion',exact:true}).click();await page.waitForFunction(()=>window.sourceReplay.state.time>.3);
+assert.equal(await page.evaluate(()=>window.__buttonRenderer.uniforms.uTime.value),0);
+await page.getByRole('button',{name:'Click',exact:true}).tap();assert.equal(await page.evaluate(()=>window.sourceReplay.state.active),false);
+await page.screenshot({path:'evidence/mobile.png'});
+await page.setViewportSize({width:844,height:390});
+await page.waitForTimeout(200);
+const alignment=await page.evaluate(()=>{const b=document.querySelector('#ripple-button').getBoundingClientRect(),s=document.querySelector('#stage').getBoundingClientRect();return {button:[b.x+b.width/2,b.y+b.height/2],stage:[s.x+s.width/2,s.y+s.height/2]};});
+assert.ok(Math.abs(alignment.button[0]-alignment.stage[0])<1);assert.ok(Math.abs(alignment.button[1]-alignment.stage[1])<1);
+console.log(JSON.stringify({mobileLayout:'passed',retinaNativeLabel:'passed',reducedMotion:'passed',touchpadInterruptsReplay:'passed',orientationAlignment:'passed'},null,2));await browser.close();

@@ -1,0 +1,12 @@
+import {launchBrowser} from './browser.mjs';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const browser=await launchBrowser();const context=await browser.newContext({viewport:{width:720,height:540},deviceScaleFactor:1,recordVideo:{dir:'evidence/live-click',size:{width:720,height:540}}});const page=await context.newPage();
+await page.goto('http://127.0.0.1:5173/?clean');await page.waitForFunction(()=>window.sourceReplay);
+await page.mouse.move(485,301);await page.waitForTimeout(1300);
+const a=await page.screenshot({path:'evidence/live-click/stationary-a.png'});await page.waitForTimeout(1300);const b=await page.screenshot({path:'evidence/live-click/stationary-b.png'});assert.ok(a.equals(b),'Fixed cursor must produce pixel-identical stationary renders');
+await page.evaluate(()=>{window.liveClickFrames=[];const start=performance.now();const run=()=>{const {surfaceGroup,uniforms}=window.__buttonRenderer;window.liveClickFrames.push({t:(performance.now()-start)/1000,scale:surfaceGroup.scale.x,clickTimes:uniforms.uClicks.value.map(c=>c.z),fontSize:parseFloat(getComputedStyle(document.querySelector('#ripple-button span')).fontSize)});if(performance.now()-start<1100)requestAnimationFrame(run);};requestAnimationFrame(run);});
+await page.mouse.click(485,301);await page.waitForTimeout(1200);
+const samples=await page.evaluate(()=>window.liveClickFrames);const minimum=Math.min(...samples.map(s=>s.scale));const final=samples.at(-1).scale;
+assert.ok(minimum<.985&&minimum>.96);assert.ok(final>1.029);assert.ok(Math.min(...samples.map(s=>s.fontSize))<23.6);
+fs.writeFileSync('evidence/live-click/measurements.json',JSON.stringify({stationaryPixelsIdentical:true,minimumScale:minimum,finalScale:final,samples},null,2));await context.close();await page.video().saveAs('evidence/live-click/interaction.webm');await browser.close();console.log({stationaryPixelsIdentical:true,minimumScale:minimum,finalScale:final,realMouseClick:'passed'});

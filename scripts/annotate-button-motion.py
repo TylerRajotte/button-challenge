@@ -1,0 +1,7 @@
+import json
+p='public/button-motion.json';j=json.load(open(p));ss=j['samples'];events=[]
+for start,end in [(408,424),(562,580),(637,658),(776,795)]:
+ pre=ss[start-6:start];bw=sum(s['width'] for s in pre)/len(pre);bh=sum(s['height'] for s in pre)/len(pre);imin=min(range(start,end+1),key=lambda i:ss[i]['width']);ih=min(range(start,end+1),key=lambda i:ss[i]['height']);curve=[{'dt':round(ss[i]['t']-ss[start]['t'],6),'scaleX':round(ss[i]['width']/bw,6),'scaleY':round(ss[i]['height']/bh,6)} for i in range(start,end+1)]
+ events.append({'observedOnset':ss[start]['t'],'minimumWidthAt':ss[imin]['t'],'minimumHeightAt':ss[ih]['t'],'recoveryAt':ss[end]['t'],'baselineWidth':round(bw,4),'baselineHeight':round(bh,4),'minimumScaleX':round(ss[imin]['width']/bw,6),'minimumScaleY':round(ss[ih]['height']/bh,6),'interpretation':'Likely press compression; onset/minimum/recovery are measured visible response, not instrumented input events.','curve':curve})
+j['events']=events;j['hoverFit']={'cx':'360.3257 - 0.0290596 * (cursorX - 360)','cy':'269.8921 - 0.00978 * (cursorY - 270)','rotationDegrees':'0.00577 - 1.40262 * ((cursorX - 360)/160) * ((cursorY - 270)/54)','rmse':{'cx':.1406,'cy':.0505,'rotationDegrees':.0587},'delayFrames':0,'note':'Linear/product fits to source hover samples, with compression events and their neighbors excluded. Descriptive fit, not recovered original implementation.'}
+open(p,'w').write(json.dumps(j,separators=(',',':'))+'\n')

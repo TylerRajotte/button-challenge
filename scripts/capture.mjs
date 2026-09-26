@@ -1,0 +1,16 @@
+import {launchBrowser} from './browser.mjs';
+import { chromium } from 'playwright';
+import fs from 'node:fs';
+const browser=await launchBrowser();
+const page=await browser.newPage({viewport:{width:720,height:540},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error') errors.push(m.text());});
+await page.goto('http://127.0.0.1:5173/?clean');
+await page.waitForFunction(()=>window.buttonReview?.state.webgl);
+await page.evaluate(()=>window.buttonReview.set({}));
+await page.waitForTimeout(500);
+await page.screenshot({path:'evidence/idle.png'});
+await page.evaluate(()=>window.buttonReview.set({x:110,y:-40,active:true,time:4}));
+await page.waitForTimeout(300);
+await page.screenshot({path:'evidence/hover.png'});
+console.log(JSON.stringify({errors,state:await page.evaluate(()=>window.buttonReview.state)},null,2));
+await browser.close();

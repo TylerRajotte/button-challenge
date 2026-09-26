@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.log
+.venv*/
+__pycache__/
+/reference/
+evidence/*
+!evidence/*.md
+!evidence/pixel-comparison.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key

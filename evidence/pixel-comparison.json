@@ -1,0 +1,968 @@
+[
+  {
+    "time": 0,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          75.713,
+          114.253,
+          225.852
+        ],
+        "implementationRGB": [
+          76.657,
+          113.87,
+          225.572
+        ],
+        "signedRGBDelta": [
+          0.944,
+          -0.383,
+          -0.28
+        ],
+        "pixelMAE": 1.214,
+        "RMSE": 1.627
+      },
+      "lower_face": {
+        "sourceRGB": [
+          50.672,
+          88.656,
+          213.06
+        ],
+        "implementationRGB": [
+          51.5,
+          87.962,
+          213.158
+        ],
+        "signedRGBDelta": [
+          0.828,
+          -0.694,
+          0.098
+        ],
+        "pixelMAE": 1.592,
+        "RMSE": 2.082
+      },
+      "left_face": {
+        "sourceRGB": [
+          58.706,
+          98.173,
+          219.773
+        ],
+        "implementationRGB": [
+          59.664,
+          97.849,
+          220.192
+        ],
+        "signedRGBDelta": [
+          0.959,
+          -0.325,
+          0.42
+        ],
+        "pixelMAE": 1.469,
+        "RMSE": 1.956
+      },
+      "right_face": {
+        "sourceRGB": [
+          58.716,
+          98.195,
+          219.694
+        ],
+        "implementationRGB": [
+          59.658,
+          97.814,
+          219.791
+        ],
+        "signedRGBDelta": [
+          0.942,
+          -0.382,
+          0.097
+        ],
+        "pixelMAE": 1.399,
+        "RMSE": 1.87
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.532,
+          245.42,
+          252.54
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.311,
+          -0.191,
+          0.057
+        ],
+        "pixelMAE": 0.504,
+        "RMSE": 0.826
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.298,
+          248.647,
+          252.743
+        ],
+        "implementationRGB": [
+          244.294,
+          248.589,
+          252.8
+        ],
+        "signedRGBDelta": [
+          -0.004,
+          -0.058,
+          0.057
+        ],
+        "pixelMAE": 0.576,
+        "RMSE": 0.858
+      },
+      "shadow": {
+        "sourceRGB": [
+          222.11,
+          231.694,
+          251.683
+        ],
+        "implementationRGB": [
+          221.38,
+          232.27,
+          250.686
+        ],
+        "signedRGBDelta": [
+          -0.73,
+          0.575,
+          -0.998
+        ],
+        "pixelMAE": 1.618,
+        "RMSE": 2.149
+      }
+    }
+  },
+  {
+    "time": 2,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          93.222,
+          126.903,
+          228.914
+        ],
+        "implementationRGB": [
+          95.591,
+          127.649,
+          227.682
+        ],
+        "signedRGBDelta": [
+          2.369,
+          0.746,
+          -1.232
+        ],
+        "pixelMAE": 2.794,
+        "RMSE": 4.318
+      },
+      "lower_face": {
+        "sourceRGB": [
+          67.53,
+          101.59,
+          217.402
+        ],
+        "implementationRGB": [
+          69.543,
+          101.366,
+          215.426
+        ],
+        "signedRGBDelta": [
+          2.013,
+          -0.223,
+          -1.976
+        ],
+        "pixelMAE": 3.032,
+        "RMSE": 4.329
+      },
+      "left_face": {
+        "sourceRGB": [
+          67.816,
+          104.903,
+          221.849
+        ],
+        "implementationRGB": [
+          68.699,
+          104.408,
+          220.842
+        ],
+        "signedRGBDelta": [
+          0.884,
+          -0.495,
+          -1.008
+        ],
+        "pixelMAE": 2.11,
+        "RMSE": 2.915
+      },
+      "right_face": {
+        "sourceRGB": [
+          104.602,
+          133.103,
+          225.824
+        ],
+        "implementationRGB": [
+          109.009,
+          134.622,
+          223.506
+        ],
+        "signedRGBDelta": [
+          4.406,
+          1.519,
+          -2.318
+        ],
+        "pixelMAE": 6.577,
+        "RMSE": 10.438
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.576,
+          245.393,
+          252.613
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.355,
+          -0.164,
+          -0.016
+        ],
+        "pixelMAE": 0.526,
+        "RMSE": 0.855
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.233,
+          248.576,
+          252.847
+        ],
+        "implementationRGB": [
+          244.248,
+          248.549,
+          252.8
+        ],
+        "signedRGBDelta": [
+          0.015,
+          -0.027,
+          -0.047
+        ],
+        "pixelMAE": 0.593,
+        "RMSE": 0.892
+      },
+      "shadow": {
+        "sourceRGB": [
+          219.165,
+          228.627,
+          251.894
+        ],
+        "implementationRGB": [
+          217.729,
+          229.335,
+          250.171
+        ],
+        "signedRGBDelta": [
+          -1.437,
+          0.708,
+          -1.723
+        ],
+        "pixelMAE": 2.005,
+        "RMSE": 2.598
+      }
+    }
+  },
+  {
+    "time": 4,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          89.844,
+          124.443,
+          228.093
+        ],
+        "implementationRGB": [
+          91.688,
+          124.717,
+          227.225
+        ],
+        "signedRGBDelta": [
+          1.844,
+          0.274,
+          -0.867
+        ],
+        "pixelMAE": 2.361,
+        "RMSE": 3.148
+      },
+      "lower_face": {
+        "sourceRGB": [
+          77.973,
+          110.039,
+          218.996
+        ],
+        "implementationRGB": [
+          80.516,
+          109.91,
+          216.73
+        ],
+        "signedRGBDelta": [
+          2.544,
+          -0.129,
+          -2.266
+        ],
+        "pixelMAE": 4.031,
+        "RMSE": 5.611
+      },
+      "left_face": {
+        "sourceRGB": [
+          67.76,
+          105.173,
+          221.636
+        ],
+        "implementationRGB": [
+          70.514,
+          105.92,
+          221.021
+        ],
+        "signedRGBDelta": [
+          2.754,
+          0.747,
+          -0.615
+        ],
+        "pixelMAE": 2.543,
+        "RMSE": 3.576
+      },
+      "right_face": {
+        "sourceRGB": [
+          79.142,
+          113.65,
+          223.291
+        ],
+        "implementationRGB": [
+          80.16,
+          113.027,
+          222.031
+        ],
+        "signedRGBDelta": [
+          1.018,
+          -0.623,
+          -1.26
+        ],
+        "pixelMAE": 3.103,
+        "RMSE": 4.181
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.604,
+          245.332,
+          252.539
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.383,
+          -0.104,
+          0.058
+        ],
+        "pixelMAE": 0.511,
+        "RMSE": 0.826
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.219,
+          248.588,
+          252.82
+        ],
+        "implementationRGB": [
+          244.272,
+          248.567,
+          252.8
+        ],
+        "signedRGBDelta": [
+          0.053,
+          -0.021,
+          -0.02
+        ],
+        "pixelMAE": 0.602,
+        "RMSE": 0.896
+      },
+      "shadow": {
+        "sourceRGB": [
+          220.714,
+          230.342,
+          251.972
+        ],
+        "implementationRGB": [
+          219.832,
+          231.062,
+          250.517
+        ],
+        "signedRGBDelta": [
+          -0.882,
+          0.72,
+          -1.454
+        ],
+        "pixelMAE": 1.883,
+        "RMSE": 2.416
+      }
+    }
+  },
+  {
+    "time": 8,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          91.855,
+          126.237,
+          227.938
+        ],
+        "implementationRGB": [
+          93.802,
+          126.354,
+          227.509
+        ],
+        "signedRGBDelta": [
+          1.947,
+          0.117,
+          -0.429
+        ],
+        "pixelMAE": 2.797,
+        "RMSE": 3.709
+      },
+      "lower_face": {
+        "sourceRGB": [
+          79.367,
+          111.106,
+          218.551
+        ],
+        "implementationRGB": [
+          82.221,
+          111.161,
+          216.373
+        ],
+        "signedRGBDelta": [
+          2.854,
+          0.055,
+          -2.178
+        ],
+        "pixelMAE": 4.63,
+        "RMSE": 8.453
+      },
+      "left_face": {
+        "sourceRGB": [
+          75.035,
+          110.74,
+          222.608
+        ],
+        "implementationRGB": [
+          79.474,
+          112.696,
+          221.95
+        ],
+        "signedRGBDelta": [
+          4.439,
+          1.956,
+          -0.659
+        ],
+        "pixelMAE": 3.556,
+        "RMSE": 4.908
+      },
+      "right_face": {
+        "sourceRGB": [
+          68.948,
+          106.146,
+          221.733
+        ],
+        "implementationRGB": [
+          71.936,
+          106.812,
+          221.265
+        ],
+        "signedRGBDelta": [
+          2.988,
+          0.666,
+          -0.469
+        ],
+        "pixelMAE": 2.569,
+        "RMSE": 3.49
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.523,
+          245.381,
+          252.594
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.302,
+          -0.153,
+          0.002
+        ],
+        "pixelMAE": 0.512,
+        "RMSE": 0.832
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.25,
+          248.587,
+          252.853
+        ],
+        "implementationRGB": [
+          244.283,
+          248.578,
+          252.8
+        ],
+        "signedRGBDelta": [
+          0.033,
+          -0.009,
+          -0.053
+        ],
+        "pixelMAE": 0.591,
+        "RMSE": 0.882
+      },
+      "shadow": {
+        "sourceRGB": [
+          220.371,
+          229.971,
+          251.675
+        ],
+        "implementationRGB": [
+          219.299,
+          230.638,
+          250.415
+        ],
+        "signedRGBDelta": [
+          -1.072,
+          0.668,
+          -1.26
+        ],
+        "pixelMAE": 1.864,
+        "RMSE": 2.432
+      }
+    }
+  },
+  {
+    "time": 12,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          92.155,
+          126.226,
+          228.533
+        ],
+        "implementationRGB": [
+          93.473,
+          125.954,
+          227.353
+        ],
+        "signedRGBDelta": [
+          1.318,
+          -0.271,
+          -1.179
+        ],
+        "pixelMAE": 2.334,
+        "RMSE": 3.413
+      },
+      "lower_face": {
+        "sourceRGB": [
+          73.35,
+          105.957,
+          216.665
+        ],
+        "implementationRGB": [
+          75.07,
+          105.311,
+          214.846
+        ],
+        "signedRGBDelta": [
+          1.72,
+          -0.647,
+          -1.82
+        ],
+        "pixelMAE": 3.947,
+        "RMSE": 8.346
+      },
+      "left_face": {
+        "sourceRGB": [
+          103.692,
+          132.605,
+          226.009
+        ],
+        "implementationRGB": [
+          107.533,
+          133.786,
+          223.745
+        ],
+        "signedRGBDelta": [
+          3.841,
+          1.181,
+          -2.264
+        ],
+        "pixelMAE": 5.767,
+        "RMSE": 10.367
+      },
+      "right_face": {
+        "sourceRGB": [
+          68.189,
+          105.376,
+          221.696
+        ],
+        "implementationRGB": [
+          69.47,
+          104.955,
+          220.927
+        ],
+        "signedRGBDelta": [
+          1.281,
+          -0.421,
+          -0.769
+        ],
+        "pixelMAE": 1.877,
+        "RMSE": 2.587
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.518,
+          245.375,
+          252.589
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.297,
+          -0.146,
+          0.008
+        ],
+        "pixelMAE": 0.499,
+        "RMSE": 0.817
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.262,
+          248.613,
+          252.81
+        ],
+        "implementationRGB": [
+          244.294,
+          248.589,
+          252.8
+        ],
+        "signedRGBDelta": [
+          0.032,
+          -0.024,
+          -0.01
+        ],
+        "pixelMAE": 0.586,
+        "RMSE": 0.874
+      },
+      "shadow": {
+        "sourceRGB": [
+          219.49,
+          229.413,
+          251.548
+        ],
+        "implementationRGB": [
+          218.46,
+          229.943,
+          250.291
+        ],
+        "signedRGBDelta": [
+          -1.03,
+          0.529,
+          -1.257
+        ],
+        "pixelMAE": 1.797,
+        "RMSE": 2.31
+      }
+    }
+  },
+  {
+    "time": 16,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          92.327,
+          126.225,
+          228.335
+        ],
+        "implementationRGB": [
+          93.571,
+          126.071,
+          227.43
+        ],
+        "signedRGBDelta": [
+          1.244,
+          -0.154,
+          -0.905
+        ],
+        "pixelMAE": 2.358,
+        "RMSE": 3.658
+      },
+      "lower_face": {
+        "sourceRGB": [
+          69.29,
+          102.975,
+          217.221
+        ],
+        "implementationRGB": [
+          70.522,
+          102.061,
+          215.451
+        ],
+        "signedRGBDelta": [
+          1.232,
+          -0.915,
+          -1.77
+        ],
+        "pixelMAE": 3.085,
+        "RMSE": 4.576
+      },
+      "left_face": {
+        "sourceRGB": [
+          105.501,
+          134.011,
+          225.416
+        ],
+        "implementationRGB": [
+          109.028,
+          134.983,
+          223.816
+        ],
+        "signedRGBDelta": [
+          3.527,
+          0.972,
+          -1.6
+        ],
+        "pixelMAE": 6.407,
+        "RMSE": 11.353
+      },
+      "right_face": {
+        "sourceRGB": [
+          68.075,
+          105.185,
+          221.667
+        ],
+        "implementationRGB": [
+          69.318,
+          104.791,
+          220.861
+        ],
+        "signedRGBDelta": [
+          1.244,
+          -0.395,
+          -0.805
+        ],
+        "pixelMAE": 1.821,
+        "RMSE": 2.5
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.519,
+          245.378,
+          252.592
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.297,
+          -0.149,
+          0.005
+        ],
+        "pixelMAE": 0.502,
+        "RMSE": 0.822
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.268,
+          248.616,
+          252.846
+        ],
+        "implementationRGB": [
+          244.294,
+          248.589,
+          252.8
+        ],
+        "signedRGBDelta": [
+          0.026,
+          -0.027,
+          -0.047
+        ],
+        "pixelMAE": 0.579,
+        "RMSE": 0.864
+      },
+      "shadow": {
+        "sourceRGB": [
+          219.212,
+          229.05,
+          251.519
+        ],
+        "implementationRGB": [
+          217.934,
+          229.526,
+          250.197
+        ],
+        "signedRGBDelta": [
+          -1.278,
+          0.476,
+          -1.322
+        ],
+        "pixelMAE": 1.898,
+        "RMSE": 2.466
+      }
+    }
+  },
+  {
+    "time": 19,
+    "regions": {
+      "upper_face": {
+        "sourceRGB": [
+          77.789,
+          115.612,
+          225.914
+        ],
+        "implementationRGB": [
+          76.657,
+          113.87,
+          225.572
+        ],
+        "signedRGBDelta": [
+          -1.132,
+          -1.743,
+          -0.342
+        ],
+        "pixelMAE": 1.912,
+        "RMSE": 2.407
+      },
+      "lower_face": {
+        "sourceRGB": [
+          52.582,
+          90.261,
+          213.056
+        ],
+        "implementationRGB": [
+          51.5,
+          87.962,
+          213.158
+        ],
+        "signedRGBDelta": [
+          -1.081,
+          -2.299,
+          0.102
+        ],
+        "pixelMAE": 2.255,
+        "RMSE": 2.878
+      },
+      "left_face": {
+        "sourceRGB": [
+          60.971,
+          99.81,
+          219.906
+        ],
+        "implementationRGB": [
+          59.664,
+          97.849,
+          220.192
+        ],
+        "signedRGBDelta": [
+          -1.306,
+          -1.961,
+          0.287
+        ],
+        "pixelMAE": 2.125,
+        "RMSE": 2.661
+      },
+      "right_face": {
+        "sourceRGB": [
+          61.548,
+          100.36,
+          220.026
+        ],
+        "implementationRGB": [
+          59.658,
+          97.814,
+          219.791
+        ],
+        "signedRGBDelta": [
+          -1.89,
+          -2.547,
+          -0.235
+        ],
+        "pixelMAE": 2.447,
+        "RMSE": 3.435
+      },
+      "halo_top": {
+        "sourceRGB": [
+          239.526,
+          245.376,
+          252.599
+        ],
+        "implementationRGB": [
+          239.221,
+          245.229,
+          252.597
+        ],
+        "signedRGBDelta": [
+          -0.305,
+          -0.147,
+          -0.002
+        ],
+        "pixelMAE": 0.507,
+        "RMSE": 0.824
+      },
+      "halo_left": {
+        "sourceRGB": [
+          244.267,
+          248.611,
+          252.817
+        ],
+        "implementationRGB": [
+          244.294,
+          248.589,
+          252.8
+        ],
+        "signedRGBDelta": [
+          0.027,
+          -0.023,
+          -0.017
+        ],
+        "pixelMAE": 0.585,
+        "RMSE": 0.872
+      },
+      "shadow": {
+        "sourceRGB": [
+          222.261,
+          231.348,
+          252.024
+        ],
+        "implementationRGB": [
+          221.38,
+          232.27,
+          250.686
+        ],
+        "signedRGBDelta": [
+          -0.881,
+          0.922,
+          -1.338
+        ],
+        "pixelMAE": 1.745,
+        "RMSE": 2.199
+      }
+    }
+  }
+]

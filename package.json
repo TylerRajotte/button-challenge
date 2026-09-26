@@ -1,0 +1,22 @@
+{
+  "name": "button-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node scripts/test-interactions.mjs && node scripts/test-responsive.mjs && node scripts/capture-replay.mjs",
+    "capture": "node scripts/capture.mjs"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.16",
+    "marked": "^18.0.14",
+    "three": "^0.180.0",
+    "vite": "^7.1.7"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}

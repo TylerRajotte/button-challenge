@@ -1,0 +1,25 @@
+{
+  "description": "Input times inferred from visible button compression and expanding wave in source footage; not raw mouse telemetry.",
+  "events": [
+    {
+      "t": 6.8,
+      "strength": 1,
+      "profile": 0
+    },
+    {
+      "t": 9.366667,
+      "strength": 1,
+      "profile": 1
+    },
+    {
+      "t": 10.616667,
+      "strength": 1,
+      "profile": 2
+    },
+    {
+      "t": 12.933333,
+      "strength": 1,
+      "profile": 3
+    }
+  ]
+}
